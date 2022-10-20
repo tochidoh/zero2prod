@@ -49,21 +49,3 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: -- -D warnings
-
-  coverage:
-    name: coverage
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout repo
-        uses: actions/checkout@v2
-
-      - name: install stable toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-
-      - name: run cargo-tarpaulin
-        uses: actions-rs/tarpualin@v0.1
-        with:
-          args: '--ignore-tests'
