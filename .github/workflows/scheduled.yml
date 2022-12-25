@@ -1,5 +1,4 @@
-
-name: security audit
+name: Security audit
 on:
   schedule:
     - cron: '0 0 * * *'
